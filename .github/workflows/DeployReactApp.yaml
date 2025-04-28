@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0  # Shallow clones should be disabled for better relevancy of analysis
 
       - name: Print ReferenceId
-        run: echo "ReferenceId: ${{ github.event.inputs.referenceId || 'not provided' }}"
+        run: echo ReferenceId ${{ github.event.inputs.referenceId }}
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
